@@ -1,0 +1,709 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1536</width>
+    <height>820</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QComboBox" name="comboBox_choose_primitive">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>190</y>
+      <width>241</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_p">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>50</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>2</number>
+    </property>
+    <property name="maximum">
+     <number>2147483647</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_show_new_primitives">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>240</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4CAF50;  /* Задаем цвет фона */
+    font: 11pt &quot;Segoe UI&quot;;
+    color: white;  /* Задаем цвет текста */
+    border: 1px solid rgb(154, 255, 143);  /* Задаем толщину и цвет границы */
+    border-radius: 7px;  /* Закругляем углы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Добавляем тень */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;  /* Добавляем плавные переходы */
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Цвет фона при наведении */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Увеличиваем тень при наведении */
+    transform: translateY(-2px);  /* Поднимаем кнопку на 2 пикселя */
+}
+
+QPushButton:pressed {
+    background-color: #39803d;  /* Цвет фона при нажатии */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Уменьшаем тень при нажатии */
+    transform: translateY(2px);  /* Поднимаем кнопку на 2 пикселя при нажатии */
+}</string>
+    </property>
+    <property name="text">
+     <string>Показать 100 следующих</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_choose_primitives">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>190</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4CAF50;  /* Задаем цвет фона */
+    font: 11pt &quot;Segoe UI&quot;;
+    color: white;  /* Задаем цвет текста */
+    border: 1px solid rgb(154, 255, 143);  /* Задаем толщину и цвет границы */
+    border-radius: 7px;  /* Закругляем углы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Добавляем тень */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;  /* Добавляем плавные переходы */
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Цвет фона при наведении */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Увеличиваем тень при наведении */
+    transform: translateY(-2px);  /* Поднимаем кнопку на 2 пикселя */
+}
+
+QPushButton:pressed {
+    background-color: #39803d;  /* Цвет фона при нажатии */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Уменьшаем тень при нажатии */
+    transform: translateY(2px);  /* Поднимаем кнопку на 2 пикселя при нажатии */
+}</string>
+    </property>
+    <property name="text">
+     <string>Выбрать</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>10</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ввод простого числа P:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>100</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ввод простого числа Q:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_q">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>140</y>
+      <width>351</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="minimum">
+     <number>2</number>
+    </property>
+    <property name="maximum">
+     <number>2147483647</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_apply">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>40</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4CAF50;  /* Задаем цвет фона */
+    font: 11pt &quot;Segoe UI&quot;;
+    color: white;  /* Задаем цвет текста */
+    border: 1px solid rgb(154, 255, 143);  /* Задаем толщину и цвет границы */
+    border-radius: 7px;  /* Закругляем углы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Добавляем тень */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;  /* Добавляем плавные переходы */
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Цвет фона при наведении */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Увеличиваем тень при наведении */
+    transform: translateY(-2px);  /* Поднимаем кнопку на 2 пикселя */
+}
+
+QPushButton:pressed {
+    background-color: #39803d;  /* Цвет фона при нажатии */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Уменьшаем тень при нажатии */
+    transform: translateY(2px);  /* Поднимаем кнопку на 2 пикселя при нажатии */
+}</string>
+    </property>
+    <property name="text">
+     <string>Подтвердить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_r">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>90</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>R = __</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_n">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>120</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>N = f(R) = __</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>150</y>
+      <width>341</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Ввод простого числа E:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_choose_primitive_e">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>190</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_d">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>240</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>D = __</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Ko">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>270</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Открытый ключ: __</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Kc">
+    <property name="geometry">
+     <rect>
+      <x>1060</x>
+      <y>300</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Закрытый ключ: __</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>431</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Расчёт хэш-образа:</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>500</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_choose_file">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>361</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #4CAF50;  /* Задаем цвет фона */
+    font: 12pt &quot;Segoe UI&quot;;
+    color: white;  /* Задаем цвет текста */
+    border: 1px solid rgb(154, 255, 143);  /* Задаем толщину и цвет границы */
+    border-radius: 7px;  /* Закругляем углы */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  /* Добавляем тень */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;  /* Добавляем плавные переходы */
+}
+
+QPushButton:hover {
+    background-color: #45a049;  /* Цвет фона при наведении */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);  /* Увеличиваем тень при наведении */
+    transform: translateY(-2px);  /* Поднимаем кнопку на 2 пикселя */
+}
+
+QPushButton:pressed {
+    background-color: #39803d;  /* Цвет фона при нажатии */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);  /* Уменьшаем тень при нажатии */
+    transform: translateY(2px);  /* Поднимаем кнопку на 2 пикселя при нажатии */
+}</string>
+    </property>
+    <property name="text">
+     <string>Выбрать файл</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_hash_count">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>581</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_file_path">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>891</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hash_true">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>540</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_s">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>580</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hash_gotten">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>620</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hash_counted">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>660</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_result">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>690</y>
+      <width>581</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>970</x>
+      <y>185</y>
+      <width>53</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButton_p">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>P</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButton_q">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Q</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>400</y>
+      <width>210</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_2">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButton_true_file">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Исходный файл</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButton_gotten_file">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Файл получателя</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>540</y>
+      <width>171</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <layout class="QFormLayout" name="formLayout_3">
+     <item row="0" column="0">
+      <widget class="QRadioButton" name="radioButton_uchar">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>unsigned char</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QRadioButton" name="radioButton_char">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>char</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1536</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
